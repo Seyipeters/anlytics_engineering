@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fct_campaign_performance
+    description: Campaign-level performance metrics ready for BI consumption.
+    columns:
+      - name: campaign_id
+        tests:
+          - not_null
+          - unique
+      - name: channel
+        tests:
+          - not_null
+      - name: campaign_date
+        tests:
+          - not_null
+      - name: roas
+        description: Return on ad spend.
